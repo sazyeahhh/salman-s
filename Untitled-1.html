@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Lato&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Happy Birthday, Salman!</title>
+</head>
+<body>
+<div class="particle" style="left: 10%; top: 20%;"></div>
+<div class="particle" style="left: 40%; top: 40%;"></div>
+<div class="particle" style="left: 60%; top: 60%;"></div>
+<div class="particle" style="left: 80%; top: 80%;"></div>
+<div class="balloon balloon1">
+    <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon2">
+    <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon3">
+    <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon4">
+    <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\balon.png" alt="Balloon" width="100" height="100">
+</div>
+<div class="balloon balloon5">
+    <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\balon.png" alt="Balloon" width="100" height="100">
+</div>
+    <script>
+        document.getElementById('audio').volume = 0.5; // Mengatur volume 50%
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function makeConfetti() {
+            var confettiAnimation = setInterval(function() {
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+                if (Date.now() > animationEnd) {
+                    clearInterval(confettiAnimation);
+                }
+            }, 250);
+        }
+        makeConfetti();
+    </script>
+     <div style="display: flex; justify-content: cent er; gap: 10px;">
+        <img src="C:\Users\Khairatuzzahra\Downloads\kue_salman-removebg-preview.png" alt="Birthday Cake" style="width: 150px; display: block; margin: 20px auto;">
+    </div>
+    <header>
+        <h1>Happiest Birthday, Salman; teman 4 bulanku!</h1>
+    </header> 
+    <section id="home">
+        <h2>Dear, the Son of February</h2>
+        <div class="photo-row">
+            <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\sal.jpg" alt="Foto Salman 1" style="width: 150px;">
+            <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\salll.jpg" alt="Foto Salman 2" style="width: 150px;">
+        </div>
+        <p>Untuk segala baik rupa dunia yang aku sayangi; yang senyum dan tawanya  dilimpahi puja-puji; yang hadirnya jadi pelebur sendu; selamat mengulangi hari lahir!</p>
+    </section>
+    <section id="About">
+        <h2>I have a letter for you!</h2>
+        <button id="openLetterButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Open Letter</button>
+<div id="letterModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img src="C:\Users\Khairatuzzahra\Documents\Salman Birhtday\Images\letter for boo.jpg" alt="Foto Salman 1">
+    </div>
+</div>
+<script>
+    const modal = document.getElementById("letterModal");
+    const openButton = document.getElementById("openLetterButton");
+    const closeButton = document.querySelector(".close-button");
+    openButton.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+    </section>
+    <footer>
+        <p>&copy;salman's birthday</p>
+    </footer>
+</body>
+</html> 

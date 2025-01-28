@@ -1,0 +1,154 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #2c3e50;
+    background-color: #4e5a83;
+    margin: 0;
+    padding: 0;
+}
+@keyframes particleAnimation {
+    0% { transform: translate(0, 0); opacity: 1; }
+    100% { transform: translate(100px, -100px); opacity: 0; }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    animation: particleAnimation 3s infinite;
+}
+
+.particle:nth-child(odd) { animation-duration: 4s; }
+.particle:nth-child(even) { animation-duration: 5s; }
+@keyframes flyBalloon {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-150px); opacity: 0.7; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.balloon {
+    position: absolute;
+    bottom: -50px;
+    animation: flyBalloon 5s ease-in-out infinite;
+    z-index: 10;
+}
+
+.balloon1 { left: 10%; animation-delay: 0s; }
+.balloon2 { left: 30%; animation-delay: 1s; }
+.balloon3 { left: 50%; animation-delay: 2s; }
+.balloon4 { left: 70%; animation-delay: 3s; }
+.balloon5 { left: 90%; animation-delay: 4s; }
+header {
+    background-color: #4e5a83;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    background: linear-gradient(45deg, #203146, #FFD700);
+    text-align: center;
+    color: #ffffff;
+    text-align: center;
+}
+header:hover {
+    background: linear-gradient(45deg, #FFD700, #202c50); /* Gradasi berubah */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* Hover efek teks */
+header h1 {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header h1:hover {
+    color: #fcf4ce; /* Teks berubah jadi emas */
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+section {
+    background-color: #2f3752;
+    color: #fff4d6;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    .photo-row {
+        display: flex; 
+        justify-content: center; 
+        gap: 20px;
+        margin-top: 20px; 
+    }
+
+    .photo-row img {
+        border-radius: 10px; /* Sudut gambar agak melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+        transition: transform 0.3s ease; /* Animasi efek hover */
+    }
+    
+    .photo-row img:hover {
+        transform: scale(1.5); /* Perbesar saat dihover */
+    }
+    .modal {
+        display: none; /* Awalnya modal disembunyikan */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8); /* Warna hitam transparan */
+    }
+    
+    /* Modal Konten */
+    .modal-content {
+        background-color: #FFF4D6; /* Background surat */
+        margin: 15% auto; /* Pusatkan modal */
+        padding: 20px;
+        border: 2px solid #FFD700; /* Border emas */
+        border-radius: 10px;
+        width: 80%;
+        max-width: 800px; /* Ukuran modal maksimal */
+        color: #2C3E50; /* Teks */
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Gambar dalam Modal */
+    .modal-image {
+        width: 100%; /* Lebar gambar mengikuti lebar modal */
+        max-width: 750px; /* Ukuran maksimal gambar */
+        height: auto; /* Menjaga rasio gambar tetap */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+    }
+    
+    /* Tombol Close */
+    .close-button {
+        color: #FFD700; /* Warna tombol */
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    .close-button:hover {
+        color: #FF5733; /* Warna berubah saat di-hover */
+    }
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333131;
+    color: #FFD700;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    font-size: 16px;
+    animation: bounce 1s infinite;
+} 
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0);}
+}
